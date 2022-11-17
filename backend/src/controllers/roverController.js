@@ -1,12 +1,12 @@
 const { v4 } = require('uuid');
-const { rover, area } = require('../data/models');
+const { rover } = require('../data/models');
 const { BadRequestError, UnauthorizeError } = require('../helper/ApiError');
 const DIRECTION = require('../helper/Direction');
 const MOVEMENT = require('../helper/Movement');
 const Rover = require('../helper/Rover');
 
 exports.createOne = async (req, res, next) => {
-    const { plateauSize, initialPosition, instruction, user_id } = req.body;
+    const { plateauSize, initialPosition, instruction } = req.body;
 
     if (!(initialPosition && instruction && plateauSize)) {
         throw new BadRequestError('All input is required');
@@ -64,7 +64,6 @@ exports.createOne = async (req, res, next) => {
     const foundSame = rovers.find(
         (rover) => finalPosition == rover.final_position
     );
-    console.log('finalPosition:', finalPosition);
 
     if (foundSame) {
         throw new UnauthorizeError(
@@ -104,39 +103,10 @@ exports.createOne = async (req, res, next) => {
 
 exports.fetchAll = async (req, res, next) => {
     try {
-        const { user_id } = req.body;
-        const foundRover = await rover.findAll({ where: { user_id } });
-        const response_data = foundRover.map((el) => {
-            return {
-                id: el.id,
-                branch: el.branch,
-                account: el.account,
-                createdAt: el.createdAt,
-                updatedAt: el.updatedAt,
-            };
-        });
+        const foundRover = await rover.findAll();
+        // console.log(new Date(foundRover[1].createdAt).toLocaleString('pt-BR'));
 
-        return res.status(200).send(response_data);
-    } catch (error) {
-        return res.status(500).json(error);
-    }
-};
-
-exports.fetchOne = async (req, res, next) => {
-    try {
-        const { user_id } = req.body.user;
-        const foundRover = await rover.findAll({ where: { user_id } });
-        const response_data = foundRover.map((el) => {
-            return {
-                id: el.id,
-                branch: el.branch,
-                account: el.account,
-                createdAt: el.createdAt,
-                updatedAt: el.updatedAt,
-            };
-        });
-
-        return res.status(200).send(response_data);
+        return res.status(200).send(foundRover);
     } catch (error) {
         return res.status(500).json(error);
     }
