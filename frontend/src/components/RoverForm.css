@@ -1,6 +1,5 @@
 .deployment {
     padding: 1rem;
-    border-radius: 12px;
     text-align: center;
 }
 
@@ -35,8 +34,8 @@
 input[type='text'] {
     padding: 5px;
     border: 2px solid #ccc;
-    -webkit-border-radius: 5px;
     border-radius: 5px;
+    -webkit-border-radius: 5px;
     width: 50%;
 }
 
@@ -46,7 +45,7 @@ input[type='text']:focus {
 
 .initial-input {
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 20px;
     flex: auto;
     border: 3px solid rgb(38, 39, 38);
     margin: auto;
@@ -64,7 +63,7 @@ label {
     display: inline-block;
     width: 100px;
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 .plateau-size {
     margin-bottom: 10px;

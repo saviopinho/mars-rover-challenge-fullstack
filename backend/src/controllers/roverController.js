@@ -59,21 +59,27 @@ exports.createOne = async (req, res, next) => {
     const newRover = new Rover(start_x, start_y, start_direction);
     const finalPosition = newRover.getFinalPosition(instruction.toUpperCase());
 
+    const finalData = finalPosition.split(' ');
+    const final_x = parseInt(finalData[0]);
+    const final_y = parseInt(finalData[1]);
+
     const rovers = await rover.findAll();
 
-    const foundSame = rovers.find(
-        (rover) => finalPosition == rover.final_position
-    );
+    const foundSame = rovers.find((rover) => {
+        const roverPosition = rover.final_position.split(' ');
+        const rover_x = parseInt(roverPosition[0]);
+        const rover_y = parseInt(roverPosition[1]);
+
+        if (final_x === rover_x && final_y === rover_y) {
+            return rover;
+        }
+    });
 
     if (foundSame) {
         throw new UnauthorizeError(
             'A rover cannot have the same final position of another one'
         );
     }
-
-    const finalData = finalPosition.split(' ');
-    const final_x = parseInt(finalData[0]);
-    const final_y = parseInt(finalData[1]);
 
     if (
         final_x < 0 ||

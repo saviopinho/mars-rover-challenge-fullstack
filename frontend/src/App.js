@@ -1,8 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import { useState } from 'react';
-import NewRover from './components/NewRover';
+import RoverForm from './components/RoverForm';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
     const [selectedCell, setSelectedCell] = useState('');
@@ -16,15 +17,18 @@ const App = () => {
                 initialPosition,
                 instruction,
             })
-            .then((response) => response.data)
+            .then((response) => response)
             .catch((error) => error.response);
 
-        if (response.data?.error) {
-            console.log('finalPosition:', response.data.error.message);
-            return;
+        console.log('response:', response);
+
+        if (response.status === 200 || response.status === 201) {
+            toast.success('Rover deployed with success!!');
+        } else {
+            toast.error(`Deploying failed: ${response.data.error.message}`);
         }
 
-        const finalData = response.finalPosition.split(' ');
+        const finalData = response.data.finalPosition.split(' ');
 
         setSelectedCell({
             col: parseInt(finalData[0]),
@@ -36,7 +40,7 @@ const App = () => {
     return (
         <div className="App">
             <ToastContainer />
-            <NewRover
+            <RoverForm
                 selectedCell={selectedCell}
                 onAddRover={addRoverHandler}
             />

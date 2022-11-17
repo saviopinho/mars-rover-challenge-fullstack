@@ -1,8 +1,8 @@
-import './NewRover.css';
+import './RoverForm.css';
 import Grid from './Grid';
 import { useState } from 'react';
 
-function NewRover(props) {
+function RoverForm(props) {
     const { onAddRover, selectedCell } = props;
 
     const [plateauSize, setPlateauSize] = useState('12 12');
@@ -17,7 +17,12 @@ function NewRover(props) {
 
     return (
         <div className="deployment">
-            <h2 className="input-title">Welcome to Mars</h2>
+            <h2
+                className="input-title"
+                style={{ border: '2px solid black', borderRadius: '12px' }}
+            >
+                WELCOME TO MARS
+            </h2>
             <div className="initial-input">
                 <div
                     style={{
@@ -60,7 +65,7 @@ function NewRover(props) {
                             fontWeight: 'bold',
                         }}
                     >
-                        Position:
+                        Landing Position:
                     </label>
                     <input
                         type="text"
@@ -114,4 +119,4 @@ function NewRover(props) {
     );
 }
 
-export default NewRover;
+export default RoverForm;
