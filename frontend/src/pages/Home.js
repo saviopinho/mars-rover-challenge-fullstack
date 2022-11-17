@@ -33,6 +33,7 @@ const Home = () => {
             toast.error(`Deploying failed: ${response.data.error.message}`);
         }
     };
+
     return (
         <RoverForm selectedCell={selectedCell} onAddRover={addRoverHandler} />
     );

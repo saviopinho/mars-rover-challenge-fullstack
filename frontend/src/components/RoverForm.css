@@ -1,6 +1,8 @@
 .deployment {
     padding: 1rem;
     text-align: center;
+    background: #eeeeef;
+    border-radius: 12px;
 }
 
 .container {
@@ -11,20 +13,19 @@
 
 .btn {
     border: 2px solid black;
-    background-color: white;
     color: black;
     padding: 14px 28px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 12px;
-    background-color: #f3f5f8;
+    background-color: #25518f;
     margin: auto;
     margin-right: 10px;
 }
 
 .deploy {
     border-color: #050110;
-    color: rgb(4, 4, 43);
+    color: rgb(255, 255, 255);
 }
 
 .deploy:hover {
@@ -34,7 +35,7 @@
 
 .report {
     border-color: #050110;
-    color: rgb(4, 4, 43);
+    color: rgb(255, 255, 255);
 }
 
 .report:hover {
@@ -47,7 +48,7 @@ input[type='text'] {
     border: 2px solid #ccc;
     border-radius: 12px;
     -webkit-border-radius: 8px;
-    width: 50%;
+    width: 60%;
 }
 
 input[type='text']:focus {
@@ -60,7 +61,8 @@ input[type='text']:focus {
     flex: auto;
     border: 3px solid rgb(38, 39, 38);
     margin: auto;
-    width: 48%;
+    width: 50%;
+    background-color: #d1e0f5;
 }
 
 .grid {
@@ -72,7 +74,7 @@ input[type='text']:focus {
 
 label {
     display: inline-block;
-    width: 100px;
+    width: 150px;
     text-align: left;
     margin-bottom: 25px;
 }
@@ -83,14 +85,16 @@ label {
 }
 
 .input-title {
-    font-family: 'Lucida Console', 'Courier New', monospace;
+    font-family: 'Lucida Console';
     margin: auto;
     width: 50%;
-    padding: 10px;
+    padding: 16px 16px;
     margin-bottom: 20px;
     text-align: center;
     border: 2px solid black;
     border-radius: 12px;
+    background-color: #25518f;
+    color: rgb(254, 252, 252);
 }
 
 .initial-position {

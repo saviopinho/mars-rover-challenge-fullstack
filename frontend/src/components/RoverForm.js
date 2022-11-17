@@ -1,9 +1,10 @@
 import './RoverForm.css';
 import Grid from './Grid';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function RoverForm(props) {
-    const { onAddRover, selectedCell } = props;
+    const { selectedCell, onAddRover } = props;
 
     const [plateauSize, setPlateauSize] = useState('12 12');
     const [instruction, setInstruction] = useState('');
@@ -15,9 +16,27 @@ function RoverForm(props) {
         instruction: instruction.toUpperCase(),
     };
 
+    const changePlateauHandler = (event) => {
+        setPlateauSize(event.target.value);
+        setInitialPosition('');
+        setInstruction('');
+    };
+
+    const changePositionHandler = (event) => {
+        setInitialPosition(event.target.value);
+    };
+
+    const changeInstructionHandler = (event) => {
+        setInstruction(event.target.value);
+    };
+
+    const deployRoverHandler = () => {
+        onAddRover(roverData);
+    };
+
     return (
         <div className="deployment">
-            <h2 className="input-title">WELCOME TO MARS</h2>
+            <h2 className="input-title">MARS ROVER CHALLENGE</h2>
             <div className="initial-input">
                 <div
                     style={{
@@ -29,7 +48,7 @@ function RoverForm(props) {
                     <label
                         style={{
                             fontFamily: 'Lucida Console',
-                            fontSize: '12px',
+                            fontSize: '13px',
                             fontWeight: 'bold',
                         }}
                     >
@@ -39,11 +58,7 @@ function RoverForm(props) {
                         value={plateauSize}
                         type="text"
                         className="plateau-input"
-                        onChange={(event) => {
-                            setPlateauSize(event.target.value);
-                            setInitialPosition('');
-                            setInstruction('');
-                        }}
+                        onChange={changePlateauHandler}
                     />
                 </div>
                 <div
@@ -56,7 +71,7 @@ function RoverForm(props) {
                     <label
                         style={{
                             fontFamily: 'Lucida Console',
-                            fontSize: '12px',
+                            fontSize: '13px',
                             fontWeight: 'bold',
                         }}
                     >
@@ -65,9 +80,7 @@ function RoverForm(props) {
                     <input
                         type="text"
                         className="position-input"
-                        onChange={(event) => {
-                            setInitialPosition(event.target.value);
-                        }}
+                        onChange={changePositionHandler}
                         value={initialPosition}
                     />
                 </div>
@@ -81,7 +94,7 @@ function RoverForm(props) {
                     <label
                         style={{
                             fontFamily: 'Lucida Console',
-                            fontSize: '12px',
+                            fontSize: '13px',
                             fontWeight: 'bold',
                         }}
                     >
@@ -90,23 +103,19 @@ function RoverForm(props) {
                     <input
                         type="text"
                         className="instruction-input"
-                        onChange={(event) => {
-                            setInstruction(event.target.value);
-                        }}
+                        onChange={changeInstructionHandler}
                         value={instruction}
                     />
                 </div>
 
                 <div className="container">
-                    <button
-                        onClick={() => {
-                            onAddRover(roverData);
-                        }}
-                        className="btn deploy"
-                    >
+                    <button onClick={deployRoverHandler} className="btn deploy">
                         Deploy
                     </button>
-                    <button className="btn report">Report</button>
+
+                    <Link to="/report">
+                        <button className="btn report">Report</button>
+                    </Link>
                 </div>
             </div>
 

@@ -108,11 +108,31 @@ exports.createOne = async (req, res, next) => {
 };
 
 exports.fetchAll = async (req, res, next) => {
-    try {
-        const foundRover = await rover.findAll();
-        console.log(new Date(foundRover[1].createdAt).toLocaleString('pt-BR'));
+    let { page, limit } = req.query;
 
-        return res.status(200).send(foundRover);
+    if (!page) page = 1;
+    if (!limit) limit = 5;
+
+    page = parseInt(page);
+    limit = parseInt(limit);
+
+    try {
+        const rovers = await rover.findAll();
+        const roversMap = rovers.map((rover) => {
+            return {
+                id: rover.id,
+                plateau_size: rover.plateau_size,
+                initial_position: rover.initial_position,
+                instruction: rover.instruction,
+                final_position: rover.final_position,
+                createdAt: new Date(rover.createdAt).toLocaleString('pt-BR'),
+            };
+        });
+
+        return res.status(200).send({
+            data: roversMap.slice((page - 1) * limit, page * limit),
+            total: roversMap.length,
+        });
     } catch (error) {
         return res.status(500).json(error);
     }
