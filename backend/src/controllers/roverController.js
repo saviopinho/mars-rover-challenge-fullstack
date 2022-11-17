@@ -90,7 +90,7 @@ exports.createOne = async (req, res, next) => {
         id: v4(),
         plateau_size: plateauSize,
         initial_position: initialPosition,
-        instruction,
+        instruction: instruction.toUpperCase(),
         final_position: finalPosition,
     };
 

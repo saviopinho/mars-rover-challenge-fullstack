@@ -1,0 +1,98 @@
+.deployment {
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.container {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #f3f5f8;
+    margin: auto;
+}
+
+.deploy {
+    border-color: #050110;
+    color: rgb(4, 4, 43);
+}
+
+.deploy:hover {
+    background-color: #00020c;
+    color: white;
+}
+
+input[type='text'] {
+    padding: 5px;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width: 50%;
+}
+
+input[type='text']:focus {
+    border-color: #333;
+}
+
+.initial-input {
+    padding: 20px;
+    border-radius: 8px;
+    flex: auto;
+    border: 3px solid rgb(38, 39, 38);
+    margin: auto;
+    width: 48%;
+}
+
+.grid {
+    margin-top: 40px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.plateau-size {
+    margin-bottom: 10px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.input-title {
+    font-family: 'Lucida Console', 'Courier New', monospace;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.initial-position {
+    margin-bottom: 10px;
+    width: 50px;
+    margin-right: 165px;
+}
+.initial-instruction {
+    margin-bottom: 20px;
+    width: 200px;
+    margin-right: 15px;
+}
+
+.btn.deploy {
+    margin-left: 50px;
+    text-align: right;
+}
