@@ -22,10 +22,12 @@ function Grid(props) {
                         selectedCell.row === row && selectedCell.col === col;
 
                     const id = found
-                        ? `${col} ${row} - ${selectedCell.direction}`
-                        : `${col} ${row}`;
+                        ? `${col} ${row} ${selectedCell.direction}`
+                        : `${col}, ${row}`;
 
-                    const color = found ? '#BBBD23' : 'white';
+                    const color = found
+                        ? 'linear-gradient(to right bottom, #173fb4, #007eea, #00add1, #00d381, #a8eb12)'
+                        : 'white';
 
                     gridRow.push(
                         <Tile

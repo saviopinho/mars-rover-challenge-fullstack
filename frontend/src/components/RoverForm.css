@@ -16,9 +16,10 @@
     padding: 14px 28px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 12px;
     background-color: #f3f5f8;
     margin: auto;
+    margin-right: 10px;
 }
 
 .deploy {
@@ -31,11 +32,21 @@
     color: white;
 }
 
+.report {
+    border-color: #050110;
+    color: rgb(4, 4, 43);
+}
+
+.report:hover {
+    background-color: #00020c;
+    color: white;
+}
+
 input[type='text'] {
     padding: 5px;
     border: 2px solid #ccc;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
+    border-radius: 12px;
+    -webkit-border-radius: 8px;
     width: 50%;
 }
 
@@ -45,7 +56,7 @@ input[type='text']:focus {
 
 .initial-input {
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 12px;
     flex: auto;
     border: 3px solid rgb(38, 39, 38);
     margin: auto;
@@ -78,6 +89,8 @@ label {
     padding: 10px;
     margin-bottom: 20px;
     text-align: center;
+    border: 2px solid black;
+    border-radius: 12px;
 }
 
 .initial-position {
@@ -89,9 +102,4 @@ label {
     margin-bottom: 20px;
     width: 200px;
     margin-right: 15px;
-}
-
-.btn.deploy {
-    margin-left: 50px;
-    text-align: right;
 }

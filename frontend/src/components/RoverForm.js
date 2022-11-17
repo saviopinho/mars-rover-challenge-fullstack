@@ -17,12 +17,7 @@ function RoverForm(props) {
 
     return (
         <div className="deployment">
-            <h2
-                className="input-title"
-                style={{ border: '2px solid black', borderRadius: '12px' }}
-            >
-                WELCOME TO MARS
-            </h2>
+            <h2 className="input-title">WELCOME TO MARS</h2>
             <div className="initial-input">
                 <div
                     style={{
@@ -111,6 +106,7 @@ function RoverForm(props) {
                     >
                         Deploy
                     </button>
+                    <button className="btn report">Report</button>
                 </div>
             </div>
 

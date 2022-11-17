@@ -8,7 +8,7 @@
 .tile {
     width: 50px;
     height: 45px;
-    border: 3px solid #ccc;
+    border: 2px solid rgb(180, 173, 173);
     text-align: center;
 }
 

@@ -110,7 +110,7 @@ exports.createOne = async (req, res, next) => {
 exports.fetchAll = async (req, res, next) => {
     try {
         const foundRover = await rover.findAll();
-        // console.log(new Date(foundRover[1].createdAt).toLocaleString('pt-BR'));
+        console.log(new Date(foundRover[1].createdAt).toLocaleString('pt-BR'));
 
         return res.status(200).send(foundRover);
     } catch (error) {

@@ -7,6 +7,9 @@ function Tile(props) {
         <div
             style={{
                 background: color,
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                lineHeight: '42px',
             }}
             id={id}
             className={`${row},${col} tile`}
