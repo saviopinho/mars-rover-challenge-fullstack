@@ -6,5 +6,5 @@ const app = require('./src/server');
 const port = process.env.EXTERNAL_PORT || 3001;
 
 app.listen(port, () => {
-    console.log('connected to port:', port);
+    console.log(`Connected to: http://localhost:${port}`);
 });
