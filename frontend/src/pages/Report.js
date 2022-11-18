@@ -130,7 +130,7 @@ function Report() {
                     columns={columns}
                     rowCount={pageState.total || 0}
                     loading={pageState.isLoading}
-                    rowsPerPageOptions={[5, 10, 20, 30, 40]}
+                    rowsPerPageOptions={[10, 30, 50, 100]}
                     pagination
                     page={pageState.page - 1}
                     pageSize={pageState.pageSize}

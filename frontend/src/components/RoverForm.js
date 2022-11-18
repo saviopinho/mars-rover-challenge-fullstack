@@ -7,7 +7,7 @@ import axios from 'axios';
 function RoverForm(props) {
     const { selectedCell, onAddRover } = props;
 
-    const [plateauSize, setPlateauSize] = useState('15 15');
+    const [plateauSize, setPlateauSize] = useState('14 12');
     const [instruction, setInstruction] = useState('');
     const [initialPosition, setInitialPosition] = useState('');
     const [roversPosition, setRoversPosition] = useState([]);
