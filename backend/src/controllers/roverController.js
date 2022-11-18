@@ -111,7 +111,7 @@ exports.fetchAll = async (req, res, next) => {
     let { page, limit } = req.query;
 
     if (!page) page = 1;
-    if (!limit) limit = 5;
+    if (!limit) limit = 10;
 
     page = parseInt(page);
     limit = parseInt(limit);
