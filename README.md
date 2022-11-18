@@ -5,40 +5,32 @@
 
 > ## Backend em NodeJS, Javascript, ExpressJS, PostgresSQL, Sequelize
 > ## Frontend em ReactJS.
->
+
+A squad of robotic rovers are to be landed by NASA on a plateau on Mars.
+
+This plateau, which is curiously rectangular, must be navigated by the rovers so that their on-board cameras can get a complete view of the surrounding terrain to send back to Earth.
+
+A rover’s position and location is represented by a combination of x and y co-ordinates and a letter representing one of the four cardinal compass points. The plateau is divided up into a grid to simplify navigation. An example position might be 0, 0, N, which means the rover is in the bottom left corner and facing North.
+
+In order to control a rover , NASA sends a simple string of letters. The possible letters are ‘L’, ‘R’ and ‘M’. ‘L’ and ‘R’ makes the rover spin 90 degrees left or right respectively, without moving from its current spot. ‘M’ means move forward one grid point, and maintain the same heading.
+
+Assume that the square directly North from (x, y) is (x, y + 1).
 
 ## ✅ Funcionalidades
-- Criar uma pessoa.
-- Autenticar uma pessoa.
-- Adicionar e listar cartões de uma conta.
-- Adicionar e listar contas da pessoa.
-- Realizar e listar transações em uma conta.
-- Consultar o saldo de uma conta.
-- Realizar transferência interna entre contas.
-- Reverter uma transação.
+- Realizar o deploy desses rovers, bem como as validações de regras, através do Frontend criado especificamente para consumir essa API desenvolvida.
+- Salvar os registros dos deploys dos rovers na base de dados PostgresSQL. 
+- Listar o resultados dos deploys através de um Report que pode ser executado direto do Frontend.
 
 ## ✅ Endpoints
-* POST /people
-* POST /login
-* POST /accounts
-* GET /accounts
-* POST /accounts/:accountId/cards
-* GET /accounts/:accountId/cards
-* GET /cards
-* POST /accounts/:accountId/transactions
-* POST /accounts/:accountId/transactions/internal
-* GET /accounts/:accountId/transactions
-* GET /accounts/:accountId/balance
-* POST /accounts/:accountId/transactions/:transactionId/revert
-
-## ✅ Extras
-* Documentação Swagger adicionada para realização de testes e validação. Por padrão o projeto estará disponível na porta 3001 em http://localhost:3001/docs
+* POST /rover
+* GET /rover
 
 ## 💻 Pré-requisitos
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-* Ter o Docker instalado e rodando para que seja criada a base de dados dessa aplicação. (Procurar fechar todos os serviços e containeres que já estiverem rodando para evitar conflito de portas)
+* Ter o Docker instalado (preferência mais atualizado) e rodando para que seja criada a base de dados dessa aplicação. (Procurar fechar todos os serviços e containeres que já estiverem rodando para evitar conflito de portas)
+
 * NodeJS Instalado na máquina.
 
 ## 🚀 Instalação
@@ -47,7 +39,7 @@ Para instalação e funcionamento, siga estas etapas:
 
 ### Clonar Projeto
 ```
-git clone https://github.com/saviopinho/Node-API-Cubos-Typescript.git
+git clone https://github.com/saviopinho/emana-teste-fullstack.git
 ```
 
 ## Configurar Variáveis de Ambiete
@@ -55,28 +47,31 @@ O arquivo .env já está preenchido com os dados necessários para o funcionamen
 
 ### Acessar raiz do projeto
 ```
-cd Node-API-Cubos-Typescript
+cd emana-teste-fullstack
 ```
 
-### Instalar Packages
+### Acessar raiz do Backend
+```
+cd backend
+```
+
+### Instalar Packages do Backend
 ```
 npm install
 ```
 
 ### Criar e subir container PostgresSQL com Docker
 ```
-npm run docker:compose
+npm run docker:compose:down
+
+npm run docker:compose:up
 ```
 
-### Criar arquivo de migrations do TypeORM
-```
-npm run migration:generate
-```
-
-### Executar as migrations do TypeORM
+### Executar a migration da tabela de backlog
 ```
 npm run migration:run
 ```
+
 ### Iniciar nosso servidor API 
 * Caso queira rodar o servidor e testar manualmente
 ```
