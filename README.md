@@ -141,7 +141,6 @@ Frontend deverão ser as mesmas, neste caso, para o Backend a porta 3001 foi con
 NODE_ENV=development
 REACT_APP_API=http://localhost:3001/rover
 PORT=8080
-
 ```
 ## ☕ Observações
 
