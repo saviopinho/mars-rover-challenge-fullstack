@@ -8,8 +8,9 @@
 .tile {
     width: 50px;
     height: 45px;
-    border: 2px solid rgb(180, 173, 173);
+    border: 1px solid rgb(180, 173, 173);
     text-align: center;
+    border-radius: 8px;
 }
 
 .black {

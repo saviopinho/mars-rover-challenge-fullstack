@@ -10,6 +10,7 @@ function Tile(props) {
                 textAlign: 'center',
                 verticalAlign: 'middle',
                 lineHeight: '42px',
+                borderRadius: '8px',
             }}
             id={id}
             className={`${row},${col} tile`}
