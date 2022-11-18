@@ -70,7 +70,7 @@ git clone https://github.com/saviopinho/emana-teste-fullstack.git
 ```
 ## BACKEND
 
-## Configurar Variáveis de Ambiete
+## Variáveis de Ambiete Backend
 O arquivo .env já está preenchido com os dados necessários para o funcionamento padrão.
 ```
 NODE_ENV=development
@@ -142,7 +142,7 @@ npm install
 ```
 npm run start
 ```
-## Configurar Variáveis de Ambiete
+## Variáveis de Ambiete Frontend
 O arquivo .env já está preenchido com os dados necessários para o funcionamento padrão, mas caso haja necessidade, a porta do serviço tanto no Backend, quanto no
 Frontend deverão ser as mesmas, neste caso, para o Backend a porta 3001 foi configurada, e para o Frontend a porta 8081
 
