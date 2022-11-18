@@ -1,7 +1,5 @@
-# Mars Rover Challenge - Teste Emana Group 
+# Mars Rover Challenge - Teste Emana Group ![exemplo imagem](https://media-exp1.licdn.com/dms/image/D4D0BAQHB4UiiPJpO2A/company-logo_100_100/0/1664893430143?e=1677110400&v=beta&t=8ULE0gmaHsgRkmCCzN_ZhSCmuLh7Ot_-mcCcMPFDHBo)
 
-
-![exemplo imagem](https://media-exp1.licdn.com/dms/image/D4D0BAQHB4UiiPJpO2A/company-logo_100_100/0/1664893430143?e=1677110400&v=beta&t=8ULE0gmaHsgRkmCCzN_ZhSCmuLh7Ot_-mcCcMPFDHBo)
 
 > ## Backend:
 * NodeJS
