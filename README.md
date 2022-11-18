@@ -143,3 +143,6 @@ REACT_APP_API=http://localhost:3001/rover
 PORT=8080
 
 ```
+## ☕ Observações
+
+* Lembrar que para o funcionamento normal da nossa aplicação, o Backend e o Frontend deverão estar rodando ao mesmo tempo, bem como o container do postgresSql no Docker.
