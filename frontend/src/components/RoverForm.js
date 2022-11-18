@@ -1,20 +1,37 @@
 import './RoverForm.css';
 import Grid from './Grid';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 function RoverForm(props) {
     const { selectedCell, onAddRover } = props;
 
-    const [plateauSize, setPlateauSize] = useState('12 12');
+    const [plateauSize, setPlateauSize] = useState('15 15');
     const [instruction, setInstruction] = useState('');
     const [initialPosition, setInitialPosition] = useState('');
+    const [roversPosition, setRoversPosition] = useState([]);
 
     const roverData = {
         plateauSize,
         initialPosition: initialPosition.toUpperCase(),
         instruction: instruction.toUpperCase(),
     };
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await axios
+                .get(`${process.env.REACT_APP_API}?page=${1}&limit=${99999999}`)
+                .then((response) => response.data)
+                .catch((error) => error.response);
+
+            if (response) {
+                setRoversPosition(response.data);
+            }
+        };
+
+        fetchData();
+    }, [selectedCell]);
 
     const changePlateauHandler = (event) => {
         setPlateauSize(event.target.value);
@@ -119,7 +136,7 @@ function RoverForm(props) {
                 </div>
             </div>
 
-            <Grid selectedCell={selectedCell} size={plateauSize}></Grid>
+            <Grid size={plateauSize} rovers={roversPosition}></Grid>
         </div>
     );
 }

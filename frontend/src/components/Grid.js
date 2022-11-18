@@ -3,7 +3,7 @@ import Tile from './Tile';
 import './Grid.css';
 
 function Grid(props) {
-    const { size, selectedCell } = props;
+    const { size, rovers } = props;
 
     const buildGrid = (size) => {
         let grid = [];
@@ -18,14 +18,27 @@ function Grid(props) {
                 let gridRow = [];
 
                 for (let col = 0; col <= m; col++) {
-                    const found =
-                        selectedCell.row === row && selectedCell.col === col;
+                    const foundRover = rovers.find((rover) => {
+                        const roverFinalData = rover.final_position.split(' ');
+                        const rover_col = parseInt(roverFinalData[1]);
+                        const rover_row = parseInt(roverFinalData[0]);
 
-                    const id = found
-                        ? `${col} ${row} ${selectedCell.direction}`
+                        if (rover_col === row && rover_row === col) {
+                            return rover;
+                        }
+                    });
+
+                    let direction = '';
+
+                    if (foundRover) {
+                        direction = foundRover.final_position.split(' ')[2];
+                    }
+
+                    const id = foundRover
+                        ? `${col} ${row} ${direction}`
                         : `${col}, ${row}`;
 
-                    const color = found
+                    const color = foundRover
                         ? 'linear-gradient(to right bottom, #173fb4, #007eea, #00add1, #00d381, #a8eb12)'
                         : 'white';
 

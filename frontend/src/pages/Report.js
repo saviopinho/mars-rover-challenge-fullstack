@@ -57,7 +57,7 @@ function Report() {
         data: [],
         total: 0,
         page: 1,
-        pageSize: 5,
+        pageSize: 10,
     });
 
     useEffect(() => {
