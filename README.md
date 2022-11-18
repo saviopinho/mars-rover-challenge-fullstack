@@ -62,6 +62,8 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 Para instalação e funcionamento, siga estas etapas:
 
+### Abrir um terminal e direcionar para a pasta onde irá clonar nosso projeto
+
 ### Clonar Projeto
 ```
 git clone https://github.com/saviopinho/emana-teste-fullstack.git
