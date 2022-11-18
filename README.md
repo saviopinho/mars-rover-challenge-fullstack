@@ -67,13 +67,13 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 Para instalação e funcionamento, siga estas etapas:
 
-### Abrir um terminal e direcionar para a pasta onde irá clonar nosso projeto
+# Abrir um terminal e direcionar para a pasta onde irá clonar nosso projeto
 
 ### Clonar Projeto
 ```
 git clone https://github.com/saviopinho/emana-teste-fullstack.git
 ```
-## BACKEND
+# BACKEND
 
 ## Variáveis de Ambiete Backend
 O arquivo .env já está preenchido com os dados necessários para o funcionamento padrão.
@@ -87,12 +87,12 @@ POSTGRES_PASSWORD=12345
 POSTGRES_DB=postgres
 ```
 
-### Acessar raiz do projeto
+## Acessar raiz do projeto
 ```
 cd emana-teste-fullstack
 ```
 
-### Acessar raiz do Backend
+## Acessar raiz do Backend
 ```
 cd backend
 ```
@@ -109,12 +109,12 @@ npm run docker:compose:down
 npm run docker:compose:up
 ```
 
-### Executar a migration da tabela de backlog
+## Executar a migration da tabela de backlog
 ```
 npm run migration:run
 ```
 
-### Iniciar nosso servidor API 
+## Iniciar nosso servidor API 
 * Caso queira rodar o servidor e testar manualmente
 ```
 npm run start
@@ -124,26 +124,26 @@ npm run start
 npm run test
 ```
 ------------------------------------------------------------------------------------------------------------
-### FRONTEND
+# FRONTEND
 
-### Agora abra um novo terminal para o Frontend na pasta onde o projeto foi clonado
+## Agora abra um novo terminal para o Frontend na pasta onde o projeto foi clonado
 
-### Acessar raiz do projeto
+## Acessar raiz do projeto
 ```
 cd emana-teste-fullstack
 ```
 
-### Acessar raiz do Frontend
+## Acessar raiz do Frontend
 ```
 cd frontend
 ```
 
-### Instalar Packages do Frontend (Aguardar alguns minutos para o término da instalação)
+## Instalar Packages do Frontend (Aguardar alguns minutos para o término da instalação)
 ```
 npm install
 ```
 
-### Executar nossa página de consumo do serviço criado (Aguardar enquanto a página abre)
+## Executar nossa página de consumo do serviço criado (Aguardar enquanto a página abre)
 ```
 npm run start
 ```
