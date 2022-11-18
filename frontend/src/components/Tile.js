@@ -11,8 +11,6 @@ function Tile(props) {
                 verticalAlign: 'middle',
                 lineHeight: '42px',
                 borderRadius: '8px',
-                backgroundColor:
-                    'linear-gradient(to bottom right, #0066ff 0%, #66ffff 100%)',
             }}
             id={id}
             className={`${row},${col} tile`}
