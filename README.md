@@ -59,7 +59,7 @@ Final Position: 2 3 S
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-* Ter o Docker instalado (preferência mais atualizado) e rodando para que seja criada a base de dados dessa aplicação. (Procurar fechar todos os serviços e containeres que já estiverem rodando para evitar conflito de portas)
+[^1]: Ter o Docker instalado (preferência mais atualizado) e rodando para que seja criada a base de dados dessa aplicação. (Procurar fechar todos os serviços e containeres que já estiverem rodando para evitar conflito de portas)
 
 * NodeJS Instalado na máquina.
 
