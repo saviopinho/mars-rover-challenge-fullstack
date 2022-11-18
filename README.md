@@ -107,6 +107,7 @@ npm install
 npm run docker:compose:down
 
 npm run docker:compose:up
+
 ```
 
 ## Executar a migration da tabela de backlog
