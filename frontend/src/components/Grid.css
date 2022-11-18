@@ -8,14 +8,14 @@
 .tile {
     width: 50px;
     height: 45px;
-    border: 1px solid rgb(180, 173, 173);
+    border: 1px solid rgb(0, 0, 0);
     text-align: center;
     border-radius: 8px;
 }
 
 .black {
     background: #000;
-    color: #ffffff;
+    color: #b7b3d2;
 }
 
 .row {

@@ -39,7 +39,7 @@ function Grid(props) {
                         : `${col}, ${row}`;
 
                     const color = foundRover
-                        ? 'linear-gradient(to right bottom, #173fb4, #007eea, #00add1, #00d381, #a8eb12)'
+                        ? 'linear-gradient(to bottom right, #0066ff 0%, #66ffff 100%)'
                         : 'white';
 
                     gridRow.push(
