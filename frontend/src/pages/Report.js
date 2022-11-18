@@ -62,7 +62,7 @@ function Report() {
         const fetchData = async () => {
             setPageState((old) => ({ ...old, isLoading: true }));
             const response = await fetch(
-                `http://localhost:3001/rover?page=${pageState.page}&limit=${pageState.pageSize}`
+                `${process.env.REACT_APP_API}?page=${pageState.page}&limit=${pageState.pageSize}`
             );
             const json = await response.json();
             setPageState((old) => ({

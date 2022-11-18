@@ -11,7 +11,7 @@ const Home = () => {
         const { plateauSize, initialPosition, instruction } = roverData;
 
         const response = await axios
-            .post('http://localhost:3001/rover', {
+            .post(process.env.REACT_APP_API, {
                 plateauSize,
                 initialPosition,
                 instruction,
