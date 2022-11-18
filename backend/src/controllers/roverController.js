@@ -1,9 +1,9 @@
 const { v4 } = require('uuid');
-const { rover } = require('../data/models');
 const { BadRequestError, UnauthorizeError } = require('../helper/ApiError');
 const DIRECTION = require('../helper/Direction');
 const MOVEMENT = require('../helper/Movement');
 const Rover = require('../helper/Rover');
+const roverRepo = require('../data/repositories/roverRepository');
 
 exports.createOne = async (req, res, next) => {
     const { plateauSize, initialPosition, instruction } = req.body;
@@ -23,7 +23,7 @@ exports.createOne = async (req, res, next) => {
 
     if (initialData && initialData.length !== 3) {
         throw new BadRequestError(
-            'Input initialPosition must have this format: X Y Diretion'
+            'Input initialPosition must have this format: X Y Direction'
         );
     }
 
@@ -63,7 +63,7 @@ exports.createOne = async (req, res, next) => {
     const final_x = parseInt(finalData[0]);
     const final_y = parseInt(finalData[1]);
 
-    const rovers = await rover.findAll();
+    const rovers = await roverRepo.findAll();
 
     const foundSame = rovers.find((rover) => {
         const roverPosition = rover.final_position.split(' ');
@@ -100,7 +100,7 @@ exports.createOne = async (req, res, next) => {
         final_position: finalPosition,
     };
 
-    await rover.create(roverData);
+    await roverRepo.create(roverData);
 
     res.status(201).json({
         finalPosition,
@@ -117,7 +117,7 @@ exports.fetchAll = async (req, res, next) => {
     limit = parseInt(limit);
 
     try {
-        const rovers = await rover.findAll();
+        const rovers = await roverRepo.findAll();
         const roversMap = rovers.map((rover) => {
             return {
                 id: rover.id,

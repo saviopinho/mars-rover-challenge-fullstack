@@ -88,12 +88,19 @@ function Report() {
                     style={{
                         float: 'none',
                         width: '600px',
-                        marginLeft: '40%',
+                        marginLeft: '35%',
                         marginRight: '50%',
                     }}
                 >
-                    <Typography variant="h6" component="div">
-                        Rover Deployment Report
+                    <Typography
+                        variant="h6"
+                        component="div"
+                        style={{
+                            fontSize: '26px',
+                            fontFamily: 'Lucida Console',
+                        }}
+                    >
+                        ROVER DEPLOYMENT REPORT
                     </Typography>
                 </Toolbar>
             </AppBar>

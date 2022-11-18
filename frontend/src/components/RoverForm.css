@@ -1,5 +1,5 @@
 .deployment {
-    padding: 1rem;
+    padding: 5px;
     text-align: center;
     background: #eeeeef;
     border-radius: 12px;
@@ -87,8 +87,8 @@ label {
 .input-title {
     font-family: 'Lucida Console';
     margin: auto;
-    width: 50%;
-    padding: 16px 16px;
+    width: 51%;
+    padding: 18px 18px;
     margin-bottom: 20px;
     text-align: center;
     border: 2px solid black;

@@ -5,8 +5,8 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node index.js",
-        "docker:compose": "docker compose down && docker compose up -d"
+        "docker:compose": "docker compose down -v && docker compose up -d",
+        "migration:run": "npx sequelize db:migrate"
     },
     "keywords": [],
     "author": "",
