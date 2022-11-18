@@ -1,22 +1,10 @@
-// const Direction = require('./src/helpers/Direction');
-// const {
-//     DirectionError,
-//     CoordinateError,
-// } = require('./src/helpers/ErrorHandler');
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
 
-// if (init_data.length !== 3) {
-//     throw new DirectionError('Coordenada Inválida: Dados Faltando');
-// }
+const app = require('./src/server');
+const port = process.env.EXTERNAL_PORT || 3001;
 
-// if (Direction.some((el) => el !== init_data[2])) {
-//     throw new Error('Coordenada Inválida: Dados Faltando');
-// }
-
-const MarsRover = require('./src/models/Rover');
-
-const start_input = '3 3 E';
-const instructions = 'MRRMMRMRRM'.toUpperCase();
-
-const marsRover = new MarsRover(start_input);
-
-console.log('marsRover:', marsRover.getFinalPosition(instructions));
+app.listen(port, () => {
+    console.log(`Connected to: http://localhost:${port}`);
+});
