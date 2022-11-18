@@ -5,8 +5,9 @@
     "main": "index.js",
     "scripts": {
         "test": "jest --runInBand --detectOpenHandles --forceExit --verbose",
-        "migrate": "sequelize-cli db:migrate",
-        "docker:compose": "docker compose down && docker compose up -d",
+        "docker:compose:down": "docker compose down -v",
+        "docker:compose:up": "docker compose up -d",
+        "migration:run": "sequelize-cli db:migrate",
         "start": "node index.js",
         "dev": "nodemon index.js"
     },
