@@ -5,8 +5,6 @@ import Report from './pages/Report';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
-    console.log('env:', process.env.REACT_APP_API);
-
     return (
         <Router>
             <div className="App">

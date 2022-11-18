@@ -1,7 +1,9 @@
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { AppBar, Box, Container, Toolbar, Typography } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
 import { useEffect, useState } from 'react';
+
 import './Report.css';
 
 const columns = [
@@ -10,7 +12,7 @@ const columns = [
         headerAlign: 'center',
         headerName: 'ID',
         align: 'center',
-        flex: 1.3,
+        flex: 1,
     },
     {
         field: 'plateau_size',
@@ -24,7 +26,7 @@ const columns = [
         headerAlign: 'center',
         headerName: 'Initial Position',
         align: 'center',
-        flex: 0.6,
+        flex: 0.8,
     },
     {
         field: 'instruction',
@@ -61,17 +63,24 @@ function Report() {
     useEffect(() => {
         const fetchData = async () => {
             setPageState((old) => ({ ...old, isLoading: true }));
-            const response = await fetch(
-                `${process.env.REACT_APP_API}?page=${pageState.page}&limit=${pageState.pageSize}`
-            );
-            const json = await response.json();
-            setPageState((old) => ({
-                ...old,
-                isLoading: false,
-                data: json.data,
-                total: json.total,
-            }));
+
+            const response = await axios
+                .get(
+                    `${process.env.REACT_APP_API}?page=${pageState.page}&limit=${pageState.pageSize}`
+                )
+                .then((response) => response.data)
+                .catch((error) => error.response);
+
+            if (response) {
+                setPageState((old) => ({
+                    ...old,
+                    isLoading: false,
+                    data: response.data,
+                    total: response.total,
+                }));
+            }
         };
+
         fetchData();
     }, [pageState.page, pageState.pageSize]);
 
