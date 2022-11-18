@@ -66,6 +66,7 @@ Para instalação e funcionamento, siga estas etapas:
 ```
 git clone https://github.com/saviopinho/emana-teste-fullstack.git
 ```
+## BACKEND
 
 ## Configurar Variáveis de Ambiete
 O arquivo .env já está preenchido com os dados necessários para o funcionamento padrão.
@@ -80,7 +81,7 @@ cd emana-teste-fullstack
 cd backend
 ```
 
-### Instalar Packages do Backend
+### Instalar Packages do Backend (Aguardar alguns minutos para o término da instalação)
 ```
 npm install
 ```
@@ -106,8 +107,37 @@ npm run start
 ```
 npm run test
 ```
+------------------------------------------------------------------------------------------------------------
+### FRONTEND
 
-## ☕ Observações
+### Agora abra um novo terminal para o Frontend na pasta onde o projeto foi clonado
 
-* Em caso de conflito de portas ao executar o comando docker compose, realizar todo o processo do início, porém alterando o .env para as portas que estarão disponíveis
-* Usar a ferramenta de sua preferência para testar as rotas e os endpoints criados
+### Acessar raiz do projeto
+```
+cd emana-teste-fullstack
+```
+
+### Acessar raiz do Frontend
+```
+cd frontend
+```
+
+### Instalar Packages do Frontend (Aguardar alguns minutos para o término da instalação)
+```
+npm install
+```
+
+### Executar nossa página de consumo do serviço criado (Aguardar enquanto a página abre)
+```
+npm run start
+```
+## Configurar Variáveis de Ambiete
+O arquivo .env já está preenchido com os dados necessários para o funcionamento padrão, mas caso haja necessidade, a porta do serviço tanto no Backend, quanto no
+Frontend deverão ser as mesmas, neste caso, para o Backend a porta 3001 foi configurada, e para o Frontend a porta 8080
+
+```
+NODE_ENV=development
+REACT_APP_API=http://localhost:3001/rover
+PORT=8080
+
+```
