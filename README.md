@@ -158,4 +158,4 @@ PORT=8081
 ```
 ## ☕ Observações
 
-* Lembrar que para o funcionamento normal da nossa aplicação, o Backend e o Frontend deverão estar rodando ao mesmo tempo, bem como o container do postgresSql no Docker.
+[^1]: Lembrar que para o funcionamento normal da nossa aplicação, o Backend e o Frontend deverão estar rodando ao mesmo tempo, bem como o container do postgresSql no Docker.
