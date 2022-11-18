@@ -72,6 +72,15 @@ git clone https://github.com/saviopinho/emana-teste-fullstack.git
 
 ## Configurar Variáveis de Ambiete
 O arquivo .env já está preenchido com os dados necessários para o funcionamento padrão.
+```
+NODE_ENV=development
+EXTERNAL_PORT=3001
+DB_PORT=5433
+POSTGRES_HOST=localhost
+POSTGRES_USER=emana
+POSTGRES_PASSWORD=12345
+POSTGRES_DB=postgres
+```
 
 ### Acessar raiz do projeto
 ```
@@ -135,12 +144,12 @@ npm run start
 ```
 ## Configurar Variáveis de Ambiete
 O arquivo .env já está preenchido com os dados necessários para o funcionamento padrão, mas caso haja necessidade, a porta do serviço tanto no Backend, quanto no
-Frontend deverão ser as mesmas, neste caso, para o Backend a porta 3001 foi configurada, e para o Frontend a porta 8080
+Frontend deverão ser as mesmas, neste caso, para o Backend a porta 3001 foi configurada, e para o Frontend a porta 8081
 
 ```
 NODE_ENV=development
 REACT_APP_API=http://localhost:3001/rover
-PORT=8080
+PORT=8081
 ```
 ## ☕ Observações
 
