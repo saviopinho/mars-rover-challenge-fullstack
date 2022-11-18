@@ -6,6 +6,10 @@ beforeAll(async () => {
     await roverRepo.clear();
 });
 
+afterAll(async () => {
+    await roverRepo.clear();
+});
+
 describe('Rover Route - Integration Test', () => {
     const roverData1 = {
         plateauSize: '14 14',
