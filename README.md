@@ -45,7 +45,11 @@ Landing Position: 3 3 E
 Instruction: MRRMMRMRRM
 Final Position: 2 3 S
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+[![](https://markdown-videos.deta/youtube/{video_id})](https://youtu.be/68H1iyqotZ0&ab_channel=SávioPinho)
+
+---------------------------------------------------------------------------------------------------------------------
 
 ## ✅ Funcionalidades
 - Realizar o deploy desses rovers, bem como as validações de regras, através do Frontend criado especificamente para consumir essa API desenvolvida.
