@@ -47,7 +47,7 @@ Final Position: 2 3 S
 
 ---------------------------------------------------------------------------------------------------------------------
 
-[![](https://markdown-videos.deta/youtube/{video_id})](https://youtu.be/68H1iyqotZ0&ab_channel=SávioPinho)
+[!(https://www.youtube.com/watch?v=68H1iyqotZ0&ab_channel=S%C3%A1vioPinho)
 
 ---------------------------------------------------------------------------------------------------------------------
 
