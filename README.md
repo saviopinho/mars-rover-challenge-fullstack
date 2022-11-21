@@ -1,4 +1,3 @@
-![exemplo imagem](https://media-exp1.licdn.com/dms/image/D4D0BAQHB4UiiPJpO2A/company-logo_100_100/0/1664893430143?e=1677110400&v=beta&t=8ULE0gmaHsgRkmCCzN_ZhSCmuLh7Ot_-mcCcMPFDHBo)
 # Mars Rover Challenge - Teste Emana Group
 
 > ## Backend:
@@ -47,7 +46,7 @@ Final Position: 2 3 S
 
 ---------------------------------------------------------------------------------------------------------------------
 
-[![Apresentação](http://i.imgur.com/Ot5DWAW.png)](https://www.youtube.com/watch?v=68H1iyqotZ0&ab_channel=S%C3%A1vioPinho)
+[![Apresentação](https://i.ibb.co/vCFfZw2/IMG-21-11-2022-153004.jpg)](https://www.youtube.com/watch?v=68H1iyqotZ0&ab_channel=S%C3%A1vioPinho)
 
 ---------------------------------------------------------------------------------------------------------------------
 
