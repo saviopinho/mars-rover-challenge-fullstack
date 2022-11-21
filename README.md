@@ -47,7 +47,7 @@ Final Position: 2 3 S
 
 ---------------------------------------------------------------------------------------------------------------------
 
-[!(https://www.youtube.com/watch?v=68H1iyqotZ0&ab_channel=S%C3%A1vioPinho)]
+[![Apresentação](http://i.imgur.com/Ot5DWAW.png)](https://www.youtube.com/watch?v=68H1iyqotZ0&ab_channel=S%C3%A1vioPinho)
 
 ---------------------------------------------------------------------------------------------------------------------
 
