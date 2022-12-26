@@ -1,4 +1,4 @@
-# Mars Rover Challenge - Teste Emana Group
+# Mars Rover Challenge - Fullstack
 
 > ## Backend:
 * NodeJS
