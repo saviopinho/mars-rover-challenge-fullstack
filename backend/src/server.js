@@ -2,7 +2,7 @@ require('express-async-errors');
 
 const express = require('express');
 const app = express();
-const errorMiddleware = require('./middleware/ErrorHandler');
+const errorMiddleware = require('./middleware/errorHandler');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
